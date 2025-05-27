@@ -1,0 +1,511 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #fff;
+  color: #111;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 4rem;
+  background-color: #ffb9cd;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.nav-links a {
+  margin-left: 2rem;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+h3 {
+  margin-top: 2em; /* or whatever */
+}
+
+.cookies img {
+  width: 500px;
+ -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.cookies {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem; /* adds space between each cookie */
+  margin-left: 3rem; /* keep your existing margin */
+  text-align: left;
+}
+
+.nav-links a:hover {
+  color: #888;
+}
+
+.cookiestitle {
+    margin-left: 15rem;
+    text-align: left;
+}
+
+.highlighted-text {
+  display: inline-block;
+  background-color: #ffb9cd;
+  padding: 0.5em 1.2em;
+  border-radius: 10px;
+  margin-top: 1em;
+}
+
+
+.cookie {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5em 1.2em;
+  border-radius: 100px;
+  margin-bottom: 1em;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+
+.cookie1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.cookie.highlighted-pink:hover {
+  background-color: #ffb9cd;
+}
+
+.cookie.highlighted-yellow:hover {
+  background-color: #fff2b9;
+}
+
+.cookie.highlighted-blue:hover {
+  background-color: #b9d8ff;
+}
+
+
+.hero {
+  text-align: center;
+  background: #ffffff
+}
+
+@font-face {
+  font-family: 'myCustomFont';
+  src: url('fonts/CiutadellaTRIAL-Bd.otf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.hero h1 {
+  font-family: 'myCustomFont', sans-serif;
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+.hero p {
+  font-size: 1.25rem;
+}
+
+.hero-container {
+  position: relative;
+  display: inline-block; /* or block, depends on your layout */
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;  /* center vertically */
+  left: 50%; /* center horizontally */
+  transform: translate(-50%, -50%);
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #000;
+  color: #fff;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: #333;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background-color: #ffb9cd;
+  flex-wrap: wrap;
+}
+
+.feature {
+  flex: 1;
+  max-width: 300px;
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+}
+
+.feature:hover {
+  transform: translateY(-10px);
+}
+
+.feature img {
+  width: 100%;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.feature h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature p {
+  color: #555;
+  font-size: 1rem;
+}
+
+.title {
+  font-family: 'myCustomFont', sans-serif;
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.footer {
+  background-color: #f0f0f0;
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .cookie-feature,
+  .cookie-feature.reverse {
+    flex-direction: column !important;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+    text-align: center;
+    transform: none !important;
+    scale: 1 !important;
+    overflow: hidden;
+  }
+
+  .cookie-img-wrapper,
+  .cookie-feature.reverse .cookie-img-wrapper {
+    position: relative;
+    transform: translateY(0);
+    margin: 0 auto 1.5rem;
+    left: 0;
+    right: 0;
+  }
+
+  .cookie-img {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 250px;
+    transform: none !important;
+  }
+
+  .cookie-details,
+  .cookie-feature.reverse .cookie-details {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .cookie-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cookie-buttons a {
+    width: 80%;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
+
+  .hero-text {
+    position: static;
+    transform: none;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+}
+
+
+
+.logo img {
+  height: 40px;
+  object-fit: contain;
+}
+
+.logo {
+  display: inline-block;
+  margin-top: 10px;
+  transition: transform 0.2s;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* new cookie */
+
+.flavor-week {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.flavor-title {
+  font-family: 'myCustomFont', sans-serif;
+  font-size: 5rem;
+  font-weight: 50;
+  margin: 1rem 0 2rem;
+  text-transform: capitalize;
+}
+
+.cookie-feature {
+  /* existing styles... */
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 2rem 3rem 2rem 6rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  max-width: 1100px;
+  margin: 2rem auto;
+  margin-top: 10rem;
+  scale: 1.15;
+  background-color: transparent;
+  overflow: visible;
+
+  /* ✨ Add this line for smooth scale transitions */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cookie-img-wrapper {
+  position: absolute;
+  left: -80px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.cookie-img {
+  width: 420px;
+  height: auto;
+  margin-left: 80px;
+  object-fit: contain;
+}
+
+.cookie-details {
+  margin-left: 350px;
+  flex: 1;
+  z-index: 1;
+}
+
+.cookie-buttons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn.light {
+  background-color: #fff;
+  color: #000;
+}
+
+.btn.dark {
+  background-color: #000;
+  color: #fff;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.cookie-feature.reverse {
+  flex-direction: row-reverse;
+  padding: 2rem 6rem 2rem 3rem; /* mirror the padding */
+}
+
+.cookie-feature.reverse .cookie-img-wrapper {
+  left: auto;
+  right: -80px;
+}
+
+.cookie-feature.reverse .cookie-img {
+  margin-left: 0;
+  margin-right: 80px;
+    -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.cookie-feature.reverse .cookie-details {
+  margin-left: 0;
+  margin-right: 350px;
+}
+
+/*colors */
+
+.cookie-feature.cookie-1:hover {
+  transform: scale(1.05);
+  background-color: #ecac58;
+}
+
+.cookie-feature.cookie-2:hover {
+  transform: scale(1.05);
+  background-color: #572f1f;
+  color: #ffffff;
+}
+
+.cookie-feature.cookie-3:hover {
+  transform: scale(1.05);
+  background-color: #ab3a64;
+  color: #ffffff;
+}
+
+.cookie-feature.cookie-4:hover {
+  transform: scale(1.05);
+  background-color: #cea273;
+}
+
+.cookie-feature.cookie-5:hover {
+  transform: scale(1.05);
+  background-color: #f2a098;
+}
+
+
+@media (max-width: 768px) {
+  .cookie-feature,
+  .cookie-feature.reverse {
+    flex-direction: column !important;
+    padding: 2rem 1rem;
+    margin-top: 4rem;
+    scale: 1 !important; /* Reset scale for small screens */
+    text-align: center;
+  }
+
+  .cookie-img-wrapper,
+  .cookie-feature.reverse .cookie-img-wrapper {
+    position: static;
+    transform: none;
+    margin: 0 auto 1.5rem;
+  }
+
+  .cookie-img {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 250px;
+  }
+
+  .cookie-details,
+  .cookie-feature.reverse .cookie-details {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .cookie-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cookie-buttons a {
+    width: 80%;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.footer {
+  margin-top: -25px;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background-color: #febcce;
+  color: #3e2723;
+  font-size: 1rem;
+}
+
+.wave-divider img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 99px;
+  margin-bottom: -1px; /* key fix for gap */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Disable text and image selection globally */
+* {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+img {
+  pointer-events: none;
+}
